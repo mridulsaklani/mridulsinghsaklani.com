@@ -64,7 +64,7 @@ const Navbar = () => {
       rounter.push('/profile')
     }
     
-  }, [session])
+  }, [rounter,session])
   
  
 

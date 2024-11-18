@@ -12,6 +12,8 @@ const skills = [
 ];
 
 const SkillbarOne = () => {
+  const ref = React.useRef(null);
+              const isInView = useInView(ref, { once: true });
   return (
     <>
      
@@ -19,9 +21,7 @@ const SkillbarOne = () => {
           
           <div>
             {skills.map((skill) => {
-              const ref = React.useRef(null);
-              const isInView = useInView(ref, { once: true });
-
+              
               return (
                 <div key={skill.name} className="mb-4" ref={ref}>
                   <div className="flex justify-between">

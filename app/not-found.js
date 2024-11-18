@@ -4,7 +4,7 @@ import React from 'react'
 
 import { useRouter } from 'next/navigation'
 
-const custom404 = () => {
+const Custom404 = () => {
 
   const router = useRouter();
 
@@ -22,7 +22,7 @@ const custom404 = () => {
       <div className="text-center p-6  rounded-lg max-w-md mx-auto">
         <h1 className="text-9xl font-extrabold text-red-600">404</h1>
         <h2 className="text-2xl font-semibold text-white mt-4">Oops! Page Not Found</h2>
-        <p className="text-lg text-neutral-200 mt-2">The page you're looking for doesn't exist.</p>
+        <p className="text-lg text-neutral-200 mt-2">The page you are looking for does not exist.</p>
         <button onClick={backHome}>
           <p className="mt-6 inline-block text-xl text-blue-500 hover:text-blue-700 font-semibold">
             Go back to Home
@@ -34,4 +34,4 @@ const custom404 = () => {
   )
 }
 
-export default custom404
+export default Custom404
