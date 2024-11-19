@@ -64,7 +64,7 @@ const Banner = () => {
         <div className="w-1/2  flex justify-center items-center " data-aos="zoom-in-left">
           <Image
             className="shadow-blue-400 shadow-xl rounded-xl"
-            src="/images/Mridul-Singh-Saklani.jpg"
+            src="/images/Mridul-Singh-saklani.jpg"
             width={400}
             height={400}
             alt="Mridul Singh Saklani"
