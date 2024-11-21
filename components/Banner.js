@@ -29,7 +29,7 @@ const Banner = () => {
       <span className="blue-circle absolute left-right"></span>
 
 
-      <div className="max-w-7xl m-auto flex items-center">
+      <div className="max-w-7xl m-auto flex items-center ">
         <div className="w-1/2" data-aos="zoom-in-right">
           <h1 className="text-6xl font-extrabold leading-tight text-white mb-6 tracking-wide">
             Building Digital Solutions – Mridul <br/>

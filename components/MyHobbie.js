@@ -1,7 +1,16 @@
-import React from "react";
+"use client"
+import React,{useEffect} from "react";
 import Image from "next/image";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const MyHobbie = () => {
+  useEffect(() => {
+    AOS.init({
+      duration:1200
+    })
+  }, [])
+  
   return (
     <>
       <div className="about max-w-7xl m-auto p-16 backdrop-blur-md rounded-xl background my-20">
@@ -17,6 +26,8 @@ const MyHobbie = () => {
                 width={250}
                 height={250}
                 alt="guitar"
+                data-aos="zoom-in"
+                
                 >
 
                 </Image>
@@ -30,6 +41,8 @@ const MyHobbie = () => {
                 width={250}
                 height={250}
                 alt="Universe"
+                data-aos="zoom-in"
+                data-aos-delay="200"
                 >
 
                 </Image>
@@ -43,6 +56,8 @@ const MyHobbie = () => {
                 width={250}
                 height={250}
                 alt="Universe"
+                data-aos="zoom-in"
+                data-aos-delay="400"
                 >
 
                 </Image>
@@ -57,6 +72,8 @@ const MyHobbie = () => {
                 width={250}
                 height={250}
                 alt="guitar"
+                data-aos="zoom-in"
+                data-aos-delay="600"
                 >
 
                 </Image>
@@ -66,10 +83,12 @@ const MyHobbie = () => {
             <div className="skill-border flex justify-center items-center gap-5 flex-col p-8 rounded-lg">
                 <Image
                
-                src="/images/singing.webp"
+                src="/images/Singing.webp"
                 width={250}
                 height={250}
                 alt="guitar"
+                data-aos="zoom-in"
+                
                 >
 
                 </Image>
@@ -83,6 +102,8 @@ const MyHobbie = () => {
                 width={250}
                 height={250}
                 alt="guitar"
+                data-aos="zoom-in"
+                data-aos-delay="200"
                 >
 
                 </Image>
@@ -96,6 +117,8 @@ const MyHobbie = () => {
                 width={250}
                 height={250}
                 alt="guitar"
+                data-aos="zoom-in"
+                data-aos-delay="400"
                 >
 
                 </Image>
@@ -109,6 +132,8 @@ const MyHobbie = () => {
                 width={250}
                 height={250}
                 alt="guitar"
+                data-aos="zoom-in"
+                data-aos-delay="600"
                 >
 
                 </Image>

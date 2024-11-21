@@ -135,7 +135,23 @@ h2{
   border-bottom: 1px solid #ffffff50;
 }
 
+.quite-image{
+  animation: cycle 5s ease-in infinite;
+}
 
+
+@keyframes cycle {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(50px);
+
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
 
 
 @keyframes left-right {

@@ -14,7 +14,7 @@ const Quite = () => {
         <div className="flex items-center gap-8 mb-12">
             <div className="w-2/5">
             <Image 
-            className=""
+            className="quite-image"
             src="/images/bike-riding.png"
             width={320}
             height={320}

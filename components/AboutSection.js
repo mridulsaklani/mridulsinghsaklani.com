@@ -1,15 +1,22 @@
 "use client"
-import React from "react";
+import React,{useEffect} from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import AOS from "aos";
+import 'aos/dist/aos.css';
 import { IoInformationCircleOutline } from "react-icons/io5";
 
 
 const About = () => {
+   useEffect(() => {
+     AOS.init({
+      duration: 2000
+     })
+   }, [])
+   
   return (
     <>
-      <div id="about"  className="border max-w-7xl m-auto p-16 backdrop-blur-md rounded-xl background my-20">
+      <div id="about"  className="border max-w-7xl m-auto p-16 backdrop-blur-md rounded-xl background my-20" data-aos="fade-up">
         <div className="mb-2 " >
           <h2 className="text-5xl font-bold text-white mb-4">About Me</h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>

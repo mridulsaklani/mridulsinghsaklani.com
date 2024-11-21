@@ -1,12 +1,19 @@
 "use client"
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import Skillbar from "./Skillbar";
 import Image from "next/image";
 import { FaLock } from "react-icons/fa";
-
+import AOS from "aos";
+import 'aos/dist/aos.css';
 const Resume = () => {
   const [num, setnum] = useState(1)
 
+   useEffect(() => {
+     AOS.init({
+      duration: 1200
+     })
+   }, [])
+   
 
 
   return (
@@ -17,7 +24,7 @@ const Resume = () => {
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
         </div>
         <div className="w-full mb-14">
-          <div className="resume-shadow grid grid-cols-4 rounded-xl">
+          <div className="resume-shadow grid grid-cols-4 rounded-xl" data-aos="zoom-in">
             <div className="py-8 flex justify-center items-center">
               <button className={num === 1 ? " text-blue-600 text-xl font-semibold tracking-wide" : "text-white text-xl font-semibold tracking-wide"}onClick={()=>setnum(1)}>
                 Education
@@ -35,11 +42,11 @@ const Resume = () => {
             </div>
           </div>
           <div  className={ num===1 ? "flex w-full py-16  gap-14" : " hidden" }>
-            <div className="w-1/2">
+            <div className="w-1/2" data-aos="zoom-in-right">
               <div className="mb-12">
                 <h5 className="text-blue-600 mb-4">2018 - Current</h5>
                 <h3 className="text-4xl font-bold text-white">
-                  Education Qality
+                  Education Quality
                 </h3>
               </div>
               <div className="pl-8 border-l-4 border-rose-200  flex flex-col gap-12">
@@ -79,11 +86,11 @@ const Resume = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2" data-aos="zoom-in-left">
             <div className="mb-12">
               <h5 className="text-blue-600 mb-4">2018 - Current</h5>
               <h3 className=" text-4xl font-bold text-white">
-                Education Qality
+                Education Quality
               </h3>
               </div>
               <div className="pl-8 border-l-4 border-rose-200  flex flex-col gap-12">

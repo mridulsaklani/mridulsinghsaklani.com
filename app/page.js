@@ -1,5 +1,6 @@
 import About from "@/components/AboutSection";
 import Banner from "@/components/Banner";
+import Counter from "@/components/Counter";
 
 import MyBlogs from "@/components/MyBlogs";
 import Resume from "@/components/Resume";
@@ -15,6 +16,7 @@ export default function Home() {
     <About/>
     <Skills/>
     <Resume/>
+    <Counter/>
     
     <MyBlogs/>
     
