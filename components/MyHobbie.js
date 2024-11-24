@@ -83,7 +83,8 @@ const MyHobbie = () => {
             <div className="skill-border flex justify-center items-center gap-5 flex-col p-8 rounded-lg">
                 <Image
                
-                src="/images/Singing.webp"
+                src="/images/S
+                inging.webp"
                 width={250}
                 height={250}
                 alt="guitar"

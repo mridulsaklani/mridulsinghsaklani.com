@@ -18,13 +18,13 @@ const Resume = () => {
 
   return (
     <>
-      <div className="max-w-7xl m-auto pt-20">
-        <div className="mb-14">
-          <h2 className="text-5xl font-bold text-white mb-4">My Resume</h2>
+      <div className="max-w-7xl m-auto pt-20 pl-5 pr-5">
+        <div className="mb-14 flex flex-col items-center lg:items-start">
+          <h2 className="lg:text-5xl font-bold text-white mb-4">My Resume</h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
         </div>
         <div className="w-full mb-14">
-          <div className="resume-shadow grid grid-cols-4 rounded-xl" data-aos="zoom-in">
+          <div className="resume-shadow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 rounded-xl" data-aos="zoom-in">
             <div className="py-8 flex justify-center items-center">
               <button className={num === 1 ? " text-blue-600 text-xl font-semibold tracking-wide" : "text-white text-xl font-semibold tracking-wide"}onClick={()=>setnum(1)}>
                 Education
@@ -41,9 +41,9 @@ const Resume = () => {
               </button>
             </div>
           </div>
-          <div  className={ num===1 ? "flex w-full py-16  gap-14" : " hidden" }>
-            <div className="w-1/2" data-aos="zoom-in-right">
-              <div className="mb-12">
+          <div  className={ num===1 ? "flex w-full flex-col lg:flex-row py-16  gap-14" : " hidden" }>
+            <div className="lg:w-1/2" data-aos="zoom-in-right">
+              <div className="mb-12 flex flex-col  items-center lg:items-start">
                 <h5 className="text-blue-600 mb-4">2018 - Current</h5>
                 <h3 className="text-4xl font-bold text-white">
                   Education Quality
@@ -86,8 +86,8 @@ const Resume = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/2" data-aos="zoom-in-left">
-            <div className="mb-12">
+            <div className="lg:w-1/2" data-aos="zoom-in-left">
+            <div className="mb-12 flex flex-col items-center lg:items-start">
               <h5 className="text-blue-600 mb-4">2018 - Current</h5>
               <h3 className=" text-4xl font-bold text-white">
                 Education Quality

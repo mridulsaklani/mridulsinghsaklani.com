@@ -29,9 +29,9 @@ const Banner = () => {
       <span className="blue-circle absolute left-right"></span>
 
 
-      <div className="max-w-7xl m-auto flex items-center ">
-        <div className="w-1/2" data-aos="zoom-in-right">
-          <h1 className="text-6xl font-extrabold leading-tight text-white mb-6 tracking-wide">
+      <div className="max-w-7xl m-auto flex flex-col lg:flex-row items-center pl-5 pr-5">
+        <div className=" lg:w-1/2 pb-16 lg:pb-0" data-aos="zoom-in-right">
+          <h1 className=" text-5xl lg:text-6xl text-center lg:text-start font-extrabold leading-tight text-white mb-6 tracking-wide">
             Building Digital Solutions – Mridul <br/>
             <ReactTyped
       strings={[
@@ -45,13 +45,13 @@ const Banner = () => {
       loop
     ></ReactTyped>
           </h1>
-          <p className="text-xl text-neutral-200 mb-10">
+          <p className="text-xl text-neutral-200 mb-10 text-center lg:text-start">
             Creating seamless web experiences, I specialize in crafting
             responsive, engaging sites that align with client goals and capture
             user attention. Every project brings a new opportunity for
             innovation.
           </p>
-          <div className="flex">
+          <div className="flex justify-center lg:justify-start">
             <Link
               href=""
               className="text-lg bg-blue-600 py-3 px-8 rounded-lg text-white flex items-center gap-2"
@@ -61,7 +61,7 @@ const Banner = () => {
             </Link>
           </div>
         </div>
-        <div className="w-1/2  flex justify-center items-center " data-aos="zoom-in-left">
+        <div className="lg:w-1/2  flex justify-center items-center " data-aos="zoom-in-left">
           <Image
             className="shadow-blue-400 shadow-xl rounded-xl"
             src="/images/Mridul-Singh-saklani.jpg"

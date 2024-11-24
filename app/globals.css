@@ -139,6 +139,18 @@ h2{
   animation: cycle 5s ease-in infinite;
 }
 
+.sidemenu{
+  transition: all 0.5s;
+}
+
+.sideMenu-header{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.46);
+}
+
+.sidemenushow{
+  margin-right: -100%;
+}
+
 
 @keyframes cycle {
   0%{

@@ -17,13 +17,13 @@ const MyBlogs = () => {
   return (
     <>
       <div className="border max-w-7xl m-auto p-16 backdrop-blur-md rounded-xl background my-20">
-        <div className="mb-10 ">
-          <h2 className="text-5xl font-bold text-white mb-4">
+        <div className="mb-10 flex flex-col items-center lg:items-start ">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Insights & Ideas
           </h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
         </div>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-col-1 lg:grid-cols-3 gap-8">
           {blog.map((e, i) => (
             <div key={i} className="border p-10 rounded-lg">
               <Image

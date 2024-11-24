@@ -15,15 +15,15 @@ const Skills = () => {
 
   return (
     <>
-      <div className="max-w-7xl m-auto py-20">
-        <div className="mb-14">
-          <h2 className="text-5xl font-bold text-white mb-4">
+      <div className="max-w-7xl m-auto py-20 pr-5 pl-5">
+        <div className="mb-14 flex flex-col items-center lg:items-start ">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Mastering the Art of Code
           </h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
         </div>
         <div className="flex flex-col gap-16">
-          <div className="  skill-border grid grid-cols-6 p-8 rounded-lg">
+          <div className="  skill-border grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 p-8 rounded-lg">
             <div className="border-right p-4 flex items-center justify-center">
               <h3 className="text-xl font-semibold text-white">
                 Front End Skills
@@ -45,7 +45,7 @@ const Skills = () => {
             <Image className="skill-img rounded-xl transition-all" src="/images/nextjs.jpeg" width={100} height={100} alt="nextjs" data-aos="zoom-in" data-aos-delay="800"/>
             </div>
           </div>
-          <div className="background grid grid-cols-6 p-8 rounded-lg">
+          <div className="background grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 p-8 rounded-lg">
           <div className="border-white p-4 flex items-center justify-center">
               <h3 className="text-xl font-semibold text-white">
                 Back End Skills
@@ -61,7 +61,7 @@ const Skills = () => {
             <Image className="skill-img transition-all" src="/images/express-js.png" width={100} height={100} alt="express js" data-aos="zoom-in" data-aos-delay="200"/>
             </div>
           </div>
-          <div className="  skill-border grid grid-cols-6 p-8 rounded-lg">
+          <div className="  skill-border grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 p-8 rounded-lg">
             <div className="border-right p-4 flex items-center justify-center">
               <h3 className="text-xl font-semibold text-white">
                 Other Skills

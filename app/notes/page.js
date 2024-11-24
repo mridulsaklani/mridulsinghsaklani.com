@@ -3,8 +3,8 @@ import { getServerSession } from 'next-auth'
 import { redirect } from 'next/navigation'
 
 const page = () => {
-  return (
-    <div>
+  return  (
+    <div className='min-h-screen'>
       
     </div>
   )

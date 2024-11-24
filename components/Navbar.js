@@ -14,6 +14,8 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { FaLock } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 const Navbar = () => {
   const { data: session } = useSession()
@@ -66,7 +68,7 @@ const Navbar = () => {
     
   }, [rounter,session])
 
-  
+  const [menushow, setmenushow] = useState(false)
   
  
 
@@ -144,14 +146,69 @@ const Navbar = () => {
 
       {showGreate && <Greate />}
 
-      <div className="navbar py-2 sticky top-0 w-full z-20 backdrop-blur-xl">
+      {/* ------------- Side Menu START------------------ */}
+
+
+
+      <div className={` ${menushow ? "mr-0" : "sidemenushow"} sidemenu w-full sm:w-[430px]  background fixed top-0 right-0 z-50 h-full`}>
+         <div className="sideMenu-header flex justify-between items-center p-6">
+         <Image src="/images/mridul-logo.png" width={75} height={75} alt="logo" />
+         <div className="flex flex-col gap-[5px] bg-blue-600 h-10 w-10 rounded-full justify-center items-center" onClick={()=>setmenushow(false)}>
+         <FaXmark className="text-white text-xl" />
+          
+         </div>
+         </div>
+         <div className="sideMenu-main p-10">
+          
+         <nav>
+              <ul className="flex items-start justify-end flex-col gap-6">
+                <li>
+                  <Link  href="/about" prefetch={true} className={`${pathname === "/about" ? "text-blue-500" : "text-neutral-200"} hover:text-blue-600 transition-all`}>
+                    About Me
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/skills" prefetch={true} className={`${pathname === "/skills" ? "text-blue-600" : "text-neutral-200"} hover:text-blue-600 transition-all`}>
+                    Skills
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/notes" prefetch={true} className={`${pathname === "/notes" ?" text-blue-600": "text-neutral-200"} hover:text-blue-600 transition-all flex relative pr-3`}>
+                    My Notes <FaLock className="lock absolute top-0 right-0 text-sm text-blue-600" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/blogs" prefetch={true} className={`${pathname === "/blogs" ?" text-blue-600": "text-neutral-200"} hover:text-blue-600 transition-all`}>
+                    Blogs
+                  </Link>
+                </li>
+                
+              </ul>
+            </nav>
+            <div className="flex  items-center justify-start gap-6 pt-10">
+
+            
+            <button className="py-2 px-6 rounded-lg bg-blue-600 text-nowrap flex items-center gap-2 text-white hover:bg-white hover:text-blue-600 transition-all" onClick={() => setPopupShow(!popupShow)}>
+              <IoIosContact className="text-xl" />
+              Contact Me
+            </button>
+            
+            </div>
+         </div>
+      </div>
+
+
+
+      {/* ------------- Side Menu End------------------ */}
+
+      <div className="navbar py-2 sticky top-0 w-full z-20 backdrop-blur-xl pl-5 pr-5">
         <div className="max-w-7xl m-auto flex items-center justify-center">
-          <div className="w-1/6">
+          <div className="w-1/4 lg:w-1/6">
             <Link href="/">
               <Image src="/images/mridul-logo.png" width={75} height={75} alt="logo" />
             </Link>
           </div>
-          <div className="w-3/6">
+          <div className=" hidden lg:block lg:w-3/6">
             <nav>
               <ul className="flex items-center justify-end gap-14">
                 <li>
@@ -178,7 +235,7 @@ const Navbar = () => {
               </ul>
             </nav>
           </div>
-          <div className="w-2/6 flex justify-end items-center gap-3">
+          <div className=" hidden lg:flex lg:w-2/6  justify-end items-center gap-3">
             <button className="py-3 px-8 rounded-lg bg-blue-600 text-nowrap flex items-center gap-2 text-white hover:bg-white hover:text-blue-600 transition-all" onClick={() => setPopupShow(!popupShow)}>
               <IoIosContact className="text-xl" />
               Contact Me
@@ -194,6 +251,15 @@ const Navbar = () => {
             {showProfile && <span className="absolute top-12 px-3 py-2 text-white border background rounded-lg w-28 text-center"> My profile </span>}
             </Link>}
 
+          </div>
+          <div className="lg:hidden w-3/4 flex justify-end items-center gap-5">
+          <div>
+            {session ? <button className="py-2 px-6 rounded-lg bg-blue-600 text-nowrap flex items-center gap-2 text-white transition-all hover:bg-white hover:text-blue-600" onClick={() => signOut()}>
+            <PiSignOutBold className="text-xl"/> Sign out </button> : <button onClick={() => signIn()} className="py-2 px-6 rounded-lg bg-blue-600 text-nowrap flex items-center gap-2 text-white transition-all hover:bg-white hover:text-blue-600">
+              <LuLogIn className="text-xl" /> Sign in
+            </button>}
+            </div>
+          <span className=" bg-blue-600 rounded-full h-10 w-10 flex items-center justify-center" onClick={()=>setmenushow(true)}><GiHamburgerMenu className="text-xl text-white"/></span>
           </div>
         </div>
       </div>
