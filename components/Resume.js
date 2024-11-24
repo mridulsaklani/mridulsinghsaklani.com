@@ -24,18 +24,18 @@ const Resume = () => {
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
         </div>
         <div className="w-full mb-14">
-          <div className="resume-shadow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 rounded-xl" data-aos="zoom-in">
-            <div className="py-8 flex justify-center items-center">
+          <div className="resume-shadow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 rounded-xl p-4 lg:p-0" data-aos="zoom-in">
+            <div className="py-4 lg:py-8 flex justify-center items-center">
               <button className={num === 1 ? " text-blue-600 text-xl font-semibold tracking-wide" : "text-white text-xl font-semibold tracking-wide"}onClick={()=>setnum(1)}>
                 Education
               </button>
             </div>
-            <div className="py-8 flex justify-center items-center">
+            <div className=" py-4 lg:py-8 flex justify-center items-center">
               <button className={num === 2 ? " text-blue-600 text-xl font-semibold tracking-wide" : "text-white text-xl font-semibold tracking-wide"} onClick={()=>setnum(2)}>
                 Profetional Skills
               </button>
             </div>
-            <div className="py-8 flex justify-center items-center">
+            <div className="py-4 lg:py-8 flex justify-center items-center">
               <button className={num === 3 ? " text-blue-600 text-xl font-semibold tracking-wide" : "text-white text-xl font-semibold tracking-wide"} onClick={()=>setnum(3)}>
                 Working
               </button>
@@ -135,8 +135,8 @@ const Resume = () => {
           <div  className={num ===2 ? "flex w-full py-16  gap-14": "hidden" }>
               <Skillbar/>
           </div>
-          <div className={num === 3 ? "flex w-full py-16 gap-14": "hidden"}>
-            <div className="w-1/2 flex justify-center items-center">
+          <div className={num === 3 ? "flex flex-col lg:flex-row w-full py-16 gap-14": "hidden"}>
+            <div className="lg:w-1/2 flex justify-center items-center">
             <Image
             className="shadow-blue-400 shadow-xl rounded-xl"
             src="/images/dev-team.jpg"
@@ -146,12 +146,12 @@ const Resume = () => {
             />
             
             </div>
-            <div className="w-1/2">
-            <h5 className="text-blue-600 mb-4">Currenty Working</h5>
-                <h3 className="text-4xl font-bold text-white mb-4">
+            <div className="lg:w-1/2">
+            <h5 className="text-blue-600 mb-2 lg:mb-4 text-center lg:text-start">Currenty Working</h5>
+                <h3 className=" text-3xl lg:text-4xl font-bold text-white mb-6 lg:mb-4 text-center lg:text-start">
                   Xonier Technology
                 </h3>
-                <p className="text-neutral-200 text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus odit doloremque tempore! Rerum illum culpa debitis, laborum nobis labore reprehenderit vero obcaecati quae? Est vitae veritatis, porro aliquid dicta cum quisquam placeat consequatur doloribus, error neque modi suscipit autem in non iure eius voluptatibus expedita at enim voluptatum sapiente ea!</p>
+                <p className="text-neutral-200 text-lg text-center lg:text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus odit doloremque tempore! Rerum illum culpa debitis, laborum nobis labore reprehenderit vero obcaecati quae? Est vitae veritatis, porro aliquid dicta cum quisquam placeat consequatur doloribus, error neque modi suscipit autem in non iure eius voluptatibus expedita at enim voluptatum sapiente ea!</p>
             </div>
            
 
