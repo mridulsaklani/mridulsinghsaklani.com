@@ -13,12 +13,15 @@ const MyHobbie = () => {
   
   return (
     <>
-      <div className="about max-w-7xl m-auto p-16 backdrop-blur-md rounded-xl background my-20">
-        <div className="mb-10 ">
-          <h2 className="text-5xl font-bold text-white mb-4">Where My Heart Wanders</h2>
+      <div className="pl-5 pr-5">
+
+      
+      <div className="about max-w-7xl m-auto  px-6 py-12 lg:p-16 backdrop-blur-md rounded-xl background my-20">
+        <div className="mb-10 flex flex-col items-center lg:items-start">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-center lg:text-start">Where My Heart Wanders</h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
         </div>
-        <div className="grid grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="skill-border flex justify-center items-center gap-5 flex-col p-8 rounded-lg">
                 <Image
                
@@ -144,6 +147,7 @@ const MyHobbie = () => {
            
 
         </div>
+      </div>
       </div>
     </>
   );

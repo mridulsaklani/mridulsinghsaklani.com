@@ -80,7 +80,8 @@ const Navbar = () => {
         <div className="blur-overlay w-full h-full fixed top-0 left-0 backdrop-blur-lg z-30"></div>
       )}
       {popupShow && (
-        <div className="half-translate fixed top-1/2 left-1/2 background rounded-lg z-40 w-full sm:w-2/3 flex overflow-hidden flex-col lg:flex-row mr-5 ml-5">
+        <div className="pl-5 pr-5">
+        <div className="half-translate fixed top-1/2 left-1/2 background rounded-lg z-40 w-full sm:w-2/3 flex overflow-hidden flex-col lg:flex-row ">
           <div className="hidden lg:block lg:w-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 p-6 md:p-10"></div>
           <div className="lg:w-1/2 p-8">
             <div className="flex items-center justify-between mb-5 text-white">
@@ -154,6 +155,7 @@ const Navbar = () => {
               </button>
             </form>
           </div>
+        </div>
         </div>
       )}
 

@@ -48,3 +48,8 @@ const page = () => {
 }
 
 export default page
+
+export const metadata = {
+  title: "Blog by Mridul Singh Saklani | Insights on Web Development & Beyond",
+  description: "Dive into the blog of Mridul Singh Saklani, where web development meets creativity. Explore articles on coding, technology trends, personal growth, and the journey of continuous learning",
+};

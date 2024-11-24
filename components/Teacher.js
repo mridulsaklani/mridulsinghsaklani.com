@@ -8,16 +8,16 @@ import { FiGithub } from "react-icons/fi";
 const Teacher = () => {
   return (
     <>
-      <div className="max-w-7xl m-auto py-20">
-        <div className="mb-14">
-          <h2 className="text-5xl font-bold text-white mb-4">
+      <div className="max-w-7xl m-auto py-20 pr-5 pl-5">
+        <div className="mb-14 flex flex-col items-center lg:items-start">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 items-center lg:items-start text-center lg:text-start">
             People Who Inspire Me
           </h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
         </div>
-        <div className="w-full grid grid-cols-2 gap-8">
-          <div className="background p-10 rounded-lg">
-            <div className="b-border flex gap-8 pb-6 ">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="background p-6 lg:p-10 rounded-lg">
+            <div className="b-border flex  gap-8 pb-6 ">
               <Image
                 className="object-cover object-top h-28 rounded-lg"
                 src="/images/Harry.webp"
@@ -30,17 +30,17 @@ const Teacher = () => {
                   href="https://www.youtube.com/@CodeWithHarry"
                   target="_blank"
                 >
-                  <h4 className="text-white font-bold text-3xl ">
+                  <h4 className="text-white font-bold text-xl lg:text-3xl ">
                     Code With Harry
                   </h4>
                 </Link>
-                <p className="text-neutral-200 text-lg font-white">
+                <p className="text-neutral-200  lg:text-lg font-white">
                   IIT Kharagpur{" "}
                 </p>
               </div>
             </div>
             <div className="pt-5">
-              <p className="text-neutral-200 text-lg pb-6">
+              <p className="text-neutral-200 text-lg pb-8 text-center lg:text-start">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 necessitatibus, consectetur dicta laborum deserunt nemo impedit
                 perspiciatis animi blanditiis exercitationem. Laboriosam
@@ -50,7 +50,7 @@ const Teacher = () => {
                 <Link
                   href="https://www.codewithharry.com/"
                   target="_blank"
-                  className="text-lg bg-blue-600 py-2 px-6 rounded-lg text-white flex items-center gap-2"
+                  className="text-lg bg-blue-600 py-2 px-5 lg:px-6 rounded-lg text-white flex items-center gap-2"
                 >
                   <MdPersonSearch className="text-xl" /> Learn More
                 </Link>
@@ -71,7 +71,7 @@ const Teacher = () => {
               </div>
             </div>
           </div>
-          <div className="background p-10 rounded-lg">
+          <div className="background p-6 lg:p-10 rounded-lg">
             <div className="b-border flex gap-8 pb-6 ">
               <Image
                 className="object-cover object-top h-28 rounded-lg"
@@ -85,17 +85,17 @@ const Teacher = () => {
                   href="https://www.youtube.com/@HiteshCodeLab"
                   target="_blank"
                 >
-                  <h4 className="text-white font-bold text-3xl ">
+                  <h4 className="text-white font-bold text-xl lg:text-3xl ">
                     Hitesh Chaudhary
                   </h4>
                 </Link>
-                <p className="text-neutral-200 text-lg font-white">
+                <p className="text-neutral-200  lg:text-lg font-white">
                    JECRC University{" "}
                 </p>
               </div>
             </div>
             <div className="pt-5">
-              <p className="text-neutral-200 text-lg pb-6">
+              <p className="text-neutral-200 text-lg pb-8 text-center lg:text-start">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
                 necessitatibus, consectetur dicta laborum deserunt nemo impedit
                 perspiciatis animi blanditiis exercitationem. Laboriosam
@@ -105,7 +105,7 @@ const Teacher = () => {
                 <Link
                   href="https://hiteshchoudhary.com/"
                   target="_blank"
-                  className="text-lg bg-blue-600 py-2 px-6 rounded-lg text-white flex items-center gap-2"
+                  className="text-lg bg-blue-600 py-2 px-5 lg:px-6 rounded-lg text-white flex items-center gap-2"
                 >
                   <MdPersonSearch className="text-xl" /> Learn More
                 </Link>

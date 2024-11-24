@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="footer py-6 pr-5 pl-5">
       <div className="max-w-7xl m-auto flex items-center">
-        <div className="w-1/2 flex items-center gap-2 flex-wrap md:flex-nowrap">
+        <div className="w-3/5 lg:w-1/2 flex items-center gap-2 flex-wrap md:flex-nowrap">
           <Link href="/" className="flex gap-2 items-center">
             <Image 
               src="/images/mridul-logo.png"
@@ -22,21 +22,21 @@ const Footer = () => {
             &copy; 2024 | <Link href="/" className="underline">mridulsinghsaklani.com</Link>
           </p>
         </div>
-        <div className="w-1/2 flex justify-end items-center ">
-          <ul className="flex items-center gap-3 ">
+        <div className="w-2/5 lg:w-1/2 flex justify-end items-center ">
+          <ul className="flex items-center gap-2 lg:gap-3 ">
             <li >
-              <Link href="https://facebook.com" className="h-9 w-9 flex items-center justify-center text-blue-600 bg-white rounded-full text-xl">
-                <FaFacebookF />
+              <Link href="https://facebook.com" className="h-8 w-8 lg:h-9 lg:w-9 flex items-center justify-center text-blue-600 bg-white rounded-full text-xl">
+                <FaFacebookF className='text-lg lg:text-base' />
               </Link>
             </li>
             <li >
-              <Link href="https://instagram.com" className="h-9 w-9 flex items-center justify-center text-blue-600 bg-white rounded-full text-xl">
-                <FaInstagram />
+              <Link href="https://instagram.com" className="h-8 w-8 lg:h-9 lg:w-9 flex items-center justify-center text-blue-600 bg-white rounded-full text-xl">
+                <FaInstagram className='text-lg lg:text-base'/>
               </Link>
             </li>
             <li >
-              <Link href="https://github.com" className="h-9 w-9 flex items-center justify-center text-blue-600 bg-white rounded-full text-xl">
-                <FiGithub />
+              <Link href="https://github.com" className="h-8 w-8 lg:h-9 lg:w-9 flex items-center justify-center text-blue-600 bg-white rounded-full text-xl">
+                <FiGithub className='text-lg lg:text-base'/>
               </Link>
             </li>
           </ul>
