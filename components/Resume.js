@@ -18,7 +18,7 @@ const Resume = () => {
 
   return (
     <>
-      <div className="max-w-7xl m-auto pt-20 pl-5 pr-5">
+      <div className="max-w-7xl m-auto pt-20 pl-5 pr-5 overflow-hidden">
         <div className="mb-14 flex flex-col items-center lg:items-start">
           <h2 className="lg:text-5xl font-bold text-white mb-4">My Resume</h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
