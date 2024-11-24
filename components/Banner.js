@@ -31,7 +31,7 @@ const Banner = () => {
 
       <div className="max-w-7xl m-auto flex flex-col lg:flex-row items-center pl-5 pr-5">
         <div className=" lg:w-1/2 pb-16 lg:pb-0" data-aos="zoom-in-right">
-          <h1 className=" text-5xl lg:text-6xl text-center lg:text-start font-extrabold leading-tight text-white mb-6 tracking-wide">
+          <h1 className=" text-4xl sm:text-5xl lg:text-6xl text-center lg:text-start font-extrabold leading-tight text-white mb-6 tracking-wide">
             Building Digital Solutions – Mridul <br/>
             <ReactTyped
       strings={[

@@ -17,7 +17,7 @@ const About = () => {
   return (
     <>
     <div className="pr-5 pl-5">
-      <div id="about"  className="border max-w-7xl m-auto p-16 backdrop-blur-md rounded-xl background my-20" data-aos="fade-up">
+      <div id="about"  className="border max-w-7xl m-auto px-6 py-10 lg:p-16 backdrop-blur-md rounded-xl background my-20" data-aos="fade-up">
         <div className="mb-2 flex flex-col items-center lg:items-start pb-5 lg:pb-0" >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">About Me</h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
