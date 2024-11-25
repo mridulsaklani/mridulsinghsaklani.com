@@ -41,7 +41,7 @@ const Teacher = () => {
             </div>
             <div className="pt-5">
               <p className="text-neutral-200 text-lg pb-8 text-center lg:text-start">
-              CodeWithHarry has been an invaluable mentor on my learning journey. His engaging tutorials and simplified explanations have helped me master coding concepts, making programming enjoyable and accessible. I'm grateful for his impactful teaching!
+              CodeWithHarry has been an invaluable mentor on my learning journey. His engaging tutorials and simplified explanations have helped me master coding concepts, making programming enjoyable and accessible. I am grateful for his impactful teaching!
               </p>
               <div className="flex justify-between items-center">
                 <Link
@@ -93,7 +93,7 @@ const Teacher = () => {
             </div>
             <div className="pt-5">
               <p className="text-neutral-200 text-lg pb-8 text-center lg:text-start">
-              Hitesh Choudhary’s practical and insightful tutorials have been instrumental in shaping my coding skills. His real-world approach and career guidance inspire me to keep learning and excelling in technology.
+              Hitesh Choudhary practical and insightful tutorials have been instrumental in shaping my coding skills. His real-world approach and career guidance inspire me to keep learning and excelling in technology.
               </p>
               <div className="flex justify-between items-center">
                 <Link
