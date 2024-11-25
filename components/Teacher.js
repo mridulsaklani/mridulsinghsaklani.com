@@ -30,7 +30,7 @@ const Teacher = () => {
                   href="https://www.youtube.com/@CodeWithHarry"
                   target="_blank"
                 >
-                  <h4 className="text-white font-bold text-xl lg:text-3xl ">
+                  <h4 className="text-white font-bold text-xl lg:text-3xl hover:text-blue-600 transition-all">
                     Code With Harry
                   </h4>
                 </Link>
@@ -41,16 +41,13 @@ const Teacher = () => {
             </div>
             <div className="pt-5">
               <p className="text-neutral-200 text-lg pb-8 text-center lg:text-start">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                necessitatibus, consectetur dicta laborum deserunt nemo impedit
-                perspiciatis animi blanditiis exercitationem. Laboriosam
-                necessitatibus magnam ea quia.
+              CodeWithHarry has been an invaluable mentor on my learning journey. His engaging tutorials and simplified explanations have helped me master coding concepts, making programming enjoyable and accessible. I'm grateful for his impactful teaching!
               </p>
               <div className="flex justify-between items-center">
                 <Link
                   href="https://www.codewithharry.com/"
                   target="_blank"
-                  className="text-lg bg-blue-600 py-2 px-5 lg:px-6 rounded-lg text-white flex items-center gap-2"
+                  className="text-lg bg-blue-600 py-2 px-5 lg:px-6 rounded-lg text-white flex items-center gap-2 hover:bg-white hover:text-blue-600 transition-all"
                 >
                   <MdPersonSearch className="text-xl" /> Learn More
                 </Link>
@@ -85,7 +82,7 @@ const Teacher = () => {
                   href="https://www.youtube.com/@HiteshCodeLab"
                   target="_blank"
                 >
-                  <h4 className="text-white font-bold text-xl lg:text-3xl ">
+                  <h4 className="text-white font-bold text-xl lg:text-3xl hover:text-blue-600 transition-all">
                     Hitesh Chaudhary
                   </h4>
                 </Link>
@@ -96,16 +93,13 @@ const Teacher = () => {
             </div>
             <div className="pt-5">
               <p className="text-neutral-200 text-lg pb-8 text-center lg:text-start">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-                necessitatibus, consectetur dicta laborum deserunt nemo impedit
-                perspiciatis animi blanditiis exercitationem. Laboriosam
-                necessitatibus magnam ea quia.
+              Hitesh Choudhary’s practical and insightful tutorials have been instrumental in shaping my coding skills. His real-world approach and career guidance inspire me to keep learning and excelling in technology.
               </p>
               <div className="flex justify-between items-center">
                 <Link
                   href="https://hiteshchoudhary.com/"
                   target="_blank"
-                  className="text-lg bg-blue-600 py-2 px-5 lg:px-6 rounded-lg text-white flex items-center gap-2"
+                  className="text-lg bg-blue-600 py-2 px-5 lg:px-6 rounded-lg text-white flex items-center gap-2 hover:bg-white hover:text-blue-600 transition-all"
                 >
                   <MdPersonSearch className="text-xl" /> Learn More
                 </Link>

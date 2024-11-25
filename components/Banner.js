@@ -54,7 +54,7 @@ const Banner = () => {
           <div className="flex justify-center lg:justify-start">
             <Link
               href=""
-              className="text-lg bg-blue-600 py-3 px-8 rounded-lg text-white flex items-center gap-2"
+              className="text-lg bg-blue-600 py-3 px-8 rounded-lg text-white flex items-center gap-2 hover:bg-white hover:text-blue-600 transition-all"
             >
               
               <AiOutlineDollarCircle className="text-xl" /> Hire Me

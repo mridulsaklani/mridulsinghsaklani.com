@@ -41,7 +41,7 @@ const Quite = () => {
             
             <div className="lg:w-3/5">
             <p className="text-lg text-neutral-200 mb-5 text-center lg:text-start">Currently, I’m working as a developer at a product-based company in Noida, while simultaneously pursuing an MBA through distance learning. My next goal is to move to Bangalore and secure a position in a reputable corporate organization. Throughout my life, I’ve focused on two key principles: <span className="text-blue-500 font-bold">Consistency</span> and <span className="text-blue-500 font-bold">Discipline</span>. I firmly believe that by holding on to these values, you can stand out from the crowd. To be truly successful, it’s important to step away from the crowd and forge your own path.</p>
-            <p className="text-lg text-neutral-200 mb-5 text-center lg:text-center">There are many fascinating aspects of my journey, and if we ever meet, there’ll be plenty to talk about! Hahaha!</p></div>
+            <p className="text-lg text-neutral-200 mb-5 text-center lg:text-start">There are many fascinating aspects of my journey, and if we ever meet, there’ll be plenty to talk about! Hahaha!</p></div>
             <div className="lg:w-2/5 flex justify-end">
             <Image 
             className=""
