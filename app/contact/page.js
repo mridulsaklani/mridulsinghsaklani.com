@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 const page = () => {
-  const [form, setform] = useState({
+  const [form, setForm] = useState({
     name: "",
     email: "",
   });
@@ -26,7 +26,7 @@ const page = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setform({
+    setForm({
       ...form,
       [name]: value,
     });
