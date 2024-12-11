@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ReduxProvider from "@/Store/ReduxProvider";
 import SessionWrapper from "@/components/SessionWrapper";
 import { Nunito } from 'next/font/google';
+import AnimatedCursor from "react-animated-cursor"
 
 
 
@@ -30,6 +31,14 @@ export default function RootLayout({ children }) {
      
 
         <Navbar/>
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={20}
+          color="37, 99, 235" 
+          outerAlpha={0.4}
+          innerScale={1.2}
+          outerScale={2}
+        />
         {children}
         <Footer/>
         
