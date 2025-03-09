@@ -11,7 +11,7 @@ const page = () => {
 
   return (
     <>
-      <div className='max-w-7xl m-auto my-20'>
+      <div className='max-w-7xl min-h-screen m-auto my-20'>
       
       </div>
     </>

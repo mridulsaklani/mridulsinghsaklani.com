@@ -13,18 +13,14 @@ const Aboutbanner = () => {
   }, []);
   return (
     <>
-      <div className="max-w-7xl m-auto py-20 flex flex-col lg:flex-row gap-8 items-center pl-5 pr-5">
+      <div className="max-w-7xl m-auto py-20 flex flex-col justify-center lg:flex-row gap-8 items-center pl-5 pr-5">
         <div className="lg:w-1/2" data-aos="zoom-out">
           <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight text-neutral-200 mb-6 tracking-wide text-center lg:text-start">
             Building with Purpose: The Story of{" "}
             <span className="text-blue-500">Mridul Singh Saklani</span>{" "}
           </h1>
-          <p className="text-xl text-neutral-200 mb-10 text-center lg:text-start">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-            eligendi. Dolor fugit facilis molestias obcaecati quibusdam beatae
-            nihil eum adipisci? Fugit, harum! Corrupti hic modi vero impedit non
-            magni, delectus deleniti harum! Non vero nulla eius recusandae
-            corrupti.
+          <p className="text-xl text-neutral-200 mb-10 lg:mb-0 text-center lg:text-start">
+          I’m Mridul Singh Saklani, a software developer passionate about learning and building meaningful solutions. From web development to AI, I love exploring new technologies. Coding is more than work for me—it’s a way to innovate, create, and make an impact with every project.
           </p>
         </div>
         <div className="lg:w-1/2 justify-center flex" data-aos="zoom-out">
@@ -35,7 +31,7 @@ const Aboutbanner = () => {
             height={360}
             quality={100}
             alt="Mridul Singh Saklani"
-          ></Image>
+          /> 
         </div>
       </div>
     </>

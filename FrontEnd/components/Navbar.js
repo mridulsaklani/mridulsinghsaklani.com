@@ -19,11 +19,15 @@ import axios from "axios";
 import Cookies from 'js-cookie';
 
 
+// Toastify
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Navbar = () => {
  
 //  States start
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [showProfile, setShowProfile] = useState(false);
   const [popupShow, setPopupShow] = useState(false);
   const [showGreate, setShowGreate] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
@@ -41,11 +45,11 @@ const Navbar = () => {
   });
 
   const [showPass, setShowPass] = useState(false);
-
+ 
 
   // States End
 
- 
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,7 +67,7 @@ const Navbar = () => {
     e.preventDefault();
     dispatch(adduser(userData));
 
-    axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}quote`, userData)
+    axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}/quote`, userData)
     .then(res=>console.log("quote created sexfully"))
     .catch(err=>console.log(err.message))
 
@@ -84,7 +88,7 @@ const Navbar = () => {
 
   const pathname = usePathname();
 
-  const rounter = useRouter();
+  const router = useRouter();
  
 
   const [menushow, setmenushow] = useState(false);
@@ -95,30 +99,93 @@ const Navbar = () => {
     setmenushow(false);
   };
 
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
-  
-    axios.post(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}user/login`,
-      signInData,
-      {
-        withCredentials: true,
+    
+    try {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/user/login`,
+        signInData,
+        { 
+          withCredentials: true, 
+           headers: {
+          "Content-Type": "application/json",
+        } },
+        
+      );
+      
+      if (res.data.token) {
+        Cookies.set("token", res.data.token); 
+        setIsLoggedIn(true);
+        setShowSignUp(false);
+        toast.success('You are logged in successfully', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          theme: 'colored',
+        });
       }
-    )
-    .then((res) => {
-      console.log("Login successful:", res.data);
-      // router.push("/dashboard") or whatever your route is
-    })
-    .catch((err) => {
-      console.error("Login error:", err.message);
-    });
+    } catch (err){
+      console.log("Login error:", err.message);
+      toast.error('Sorry, you are not logged in, Please check your ID or Password', {
+            position: 'top-right',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            theme: 'colored',
+          });
+          router.push('/')
+    }
   
     setSignInData({ email: "", password: "" });
-    setShowSignUp(false);
   };
+
+  const handleLogout = async() => {
+
+    try {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}/user/logout`, 
+        {},
+        { withCredentials: true }
+      )
+      if(response.status === 200) {
+        setIsLoggedIn(false);
+        router.push('/');
+        toast.success('You logged out successfully', {
+          position: 'top-right',
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          theme: 'colored',
+        });
+      }
+    } catch (error) {
+      console.log(error.message);
+      toast.error('token not deleted', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        theme: 'colored',
+      });
+    }
+    
+    
+    
+  };
+  
   
   return (
     <>
+   
       {popupShow && (
         <div className="blur-overlay w-full h-full fixed top-0 left-0 backdrop-blur-lg z-30"></div>
       )}
@@ -207,7 +274,7 @@ const Navbar = () => {
       {showSignUp && <div className="blur-overlay w-full h-full fixed top-0 left-0 backdrop-blur-lg z-30"></div>}
       {showSignUp && <div className="fixed w-[650px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 p-8 background rounded-lg">
 
-          <h2 className="text-xl font-bold text-white pb-4"> Sign Up </h2>
+          <h2 className="text-xl font-bold text-white pb-4"> Sign In </h2>
           <span className="absolute top-4 right-4 text-white" onClick={()=>setShowSignUp(false)}>
                 <FaXmark className="text-2xl cursor-pointer" />
               </span>
@@ -228,6 +295,8 @@ const Navbar = () => {
           </form>
      
       </div>}
+
+      <ToastContainer />
 
       {/* ------------- Side Menu START------------------ */}
 
@@ -382,6 +451,20 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
+                    href="/flashback"
+                    prefetch={true}
+                    className={`${
+                      pathname === "/flashback"
+                        ? " text-blue-600"
+                        : "text-neutral-200"
+                    } hover:text-blue-600 transition-all flex relative pr-3`}
+                  >
+                    Flashback
+                   
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/blogs"
                     prefetch={true}
                     className={`${
@@ -393,6 +476,19 @@ const Navbar = () => {
                     Blogs
                   </Link>
                 </li>
+                {isLoggedIn && <li>
+                  <Link
+                    href="/profile"
+                    prefetch={true}
+                    className={`${
+                      pathname === "/profile"
+                        ? " text-blue-600"
+                        : "text-neutral-200"
+                    } hover:text-blue-600 transition-all`}
+                  >
+                    Profile
+                  </Link>
+                </li>}
               </ul>
             </nav>
           </div>
@@ -406,13 +502,22 @@ const Navbar = () => {
             </button>
             <div>
                
-                <button
-                 
-                  className="py-3 px-8 rounded-lg bg-blue-600 text-nowrap flex items-center gap-2 text-white transition-all hover:bg-white hover:text-blue-600"
-                  onClick={()=>setShowSignUp(true)}
-                >
-                  <LuLogIn className="text-xl" /> Sign in
-                </button>
+            {isLoggedIn ? (
+  <button
+    onClick={handleLogout}
+    className="py-3 px-8 rounded-lg bg-blue-600 text-white hover:bg-white hover:text-blue-600 transition-all flex  gap-2 items-center"
+  >
+    <PiSignOutBold className="text-xl" /> Log Out
+  </button>
+) : (
+  <button
+    onClick={() => setShowSignUp(true)}
+    className="py-3 px-8 rounded-lg bg-blue-600 text-white hover:bg-white hover:text-blue-600 transition-all flex  gap-2 items-center"
+  >
+    <LuLogIn className="text-xl" /> Log In
+  </button>
+)}
+
             
             </div>
             

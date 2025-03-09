@@ -5,10 +5,10 @@ import { motion, useInView } from "framer-motion";
 const skills = [
   { name: "Node.js", level: 55 },
   { name: "MongoDB", level: 50 },
-  { name: "python", level: 65 },
+  { name: "Python", level: 65 },
   { name: "Wordpress", level: 70 },
-  { name: "Tailwind", level: 90 },
-  { name: "Figma", level: 65 },
+  { name: "C++", level: 60 },
+  { name: "Java", level: 65 },
 ];
 
 const SkillbarTwo = () => {
@@ -43,7 +43,6 @@ const SkillbarTwo = () => {
           </div>
         </div>
         
-     
     </>
   );
 };

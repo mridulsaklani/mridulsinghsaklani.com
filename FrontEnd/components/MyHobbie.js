@@ -85,9 +85,8 @@ const MyHobbie = () => {
             </div>
             <div className="skill-border flex justify-center items-center gap-5 flex-col p-8 rounded-lg">
                 <Image
-               
-                src="/images/S
-                inging.webp"
+                
+                src="/images/Singing.webp"
                 width={250}
                 height={250}
                 alt="guitar"
@@ -101,7 +100,7 @@ const MyHobbie = () => {
             </div>
             <div className="skill-border flex justify-center items-center gap-5 flex-col p-8 rounded-lg">
                 <Image
-               
+               className="aspect-square object-contain"
                 src="/images/camping.webp"
                 width={250}
                 height={250}

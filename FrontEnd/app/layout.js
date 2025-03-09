@@ -1,3 +1,4 @@
+
 import './globals.css';
 
 import ReduxProvider from "@/Store/ReduxProvider";
@@ -23,11 +24,11 @@ export default function RootLayout({ children }) {
       >
         <ReduxProvider>
      
-
+    
       
         <AnimatedCursor
-          innerSize={8}
-          outerSize={20}
+          innerSize={0}
+          outerSize={10}
           color="37, 99, 235" 
           outerAlpha={0.4}
           innerScale={1.2}

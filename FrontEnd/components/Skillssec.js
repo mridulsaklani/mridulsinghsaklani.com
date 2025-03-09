@@ -57,8 +57,11 @@ const Skills = () => {
             <div className="border-white p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/mongo-db.png" width={100} height={100} alt="mongo-db" data-aos="zoom-in" data-aos-delay="200"/>
             </div>
-            <div className=" p-4 flex items-center justify-center">
+            <div className="border-white p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/express-js.png" width={100} height={100} alt="express js" data-aos="zoom-in" data-aos-delay="200"/>
+            </div>
+            <div className=" p-4 flex items-center justify-center">
+            <Image className="skill-img transition-all" src="/images/java.png" width={100} height={100} alt="express js" data-aos="zoom-in" data-aos-delay="200"/>
             </div>
           </div>
           <div className="  skill-border grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 p-8 rounded-lg">
@@ -75,10 +78,10 @@ const Skills = () => {
             
             </div>
             <div className="border-right p-4 flex items-center justify-center">
-            <Image className="skill-img transition-all" src="/images/figma.png" width={100} height={100} alt="figma" data-aos="zoom-in" data-aos-delay="400"/>
+            <Image className="skill-img transition-all" src="/images/c-language.png" width={100} height={100} alt="figma" data-aos="zoom-in" data-aos-delay="400"/>
             </div>
             <div className="border-right p-4 flex items-center justify-center">
-            <Image className="skill-img transition-all" src="/images/tailwind.png" width={100} height={100} alt="tailwind" data-aos="zoom-in" data-aos-delay="600"/>
+            <Image className="skill-img transition-all" src="/images/figma.png" width={100} height={100} alt="tailwind" data-aos="zoom-in" data-aos-delay="600"/>
             </div>
             <div className=" p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/wordpress.png" width={100} height={100} alt="wordpress" data-aos="zoom-in" data-aos-delay="800"/>
