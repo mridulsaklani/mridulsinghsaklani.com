@@ -11,7 +11,7 @@ const Quite = () => {
           </h2>
           <span className="border-blue-600 border-4 w-20 rounded-full flex flex-col"></span>
         </div>
-        <div className="flex items-center flex-col lg:flex-row gap-8 mb-12">
+        <div className="flex items-center flex-col lg:flex-row gap-8 mb-12 overflow-hidden md:overflow-auto">
             <div className="lg:w-2/5">
             <Image 
             className="quite-image"

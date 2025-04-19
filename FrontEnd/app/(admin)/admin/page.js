@@ -27,7 +27,7 @@ const Page = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}user/login`,
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/user/login`,
         formData,
         {
           headers: {
@@ -36,7 +36,7 @@ const Page = () => {
         },
         { withCredentials: true }
       );
-      if (response.status === 200 || response.data.token) {
+      if (response.status === 200) {
         toast.success("You are login successfully", {
           position: "top-right",
           draggable: true,
@@ -46,7 +46,7 @@ const Page = () => {
           pauseOnHover: true,
           theme: "colored",
         });
-        Cookies.set("admin", response.data.token);
+       
         setFormData({ email: "", password: "" });
         router.push("/dashboard");
       } 
