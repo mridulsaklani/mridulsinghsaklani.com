@@ -22,11 +22,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
   //  States start
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [popupShow, setPopupShow] = useState(false);
   const [showGreate, setShowGreate] = useState(false);
   const [showSignUp, setShowSignUp] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("")
   const [userData, setUserData] = useState({
     firstname: "",
     lastname: "",
@@ -103,28 +102,11 @@ const Navbar = () => {
     setmenushow(false);
   };
 
-  const VerifyAuth = async()=>{
-    try {
-      const response = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/auth/verify`, {withCredentials: true})
-      if(response.data.isAuthenticated){
-        setIsAuthenticated(true)
-      }
-    } catch (error) {
-      
-      setIsAuthenticated(false)
-    }
-  }
-
-  useEffect(() => {
-    VerifyAuth()
-  }, [])
-  
-
   const handleSignIn = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
+      const res = await axios.post(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/user/login`,
         signInData,
         {
@@ -135,8 +117,9 @@ const Navbar = () => {
         }
       );
 
-      if (response.status === 200) {        
-
+      if (res.data.token) {
+        Cookies.set("token", res.data.token);
+        setIsLoggedIn(true);
         setShowSignUp(false);
         toast.success("You are logged in successfully", {
           position: "top-right",
@@ -150,9 +133,22 @@ const Navbar = () => {
       }
     } catch (err) {
       console.log("Login error:", err.message);
-      setErrorMessage(err.response?.data?.message);
+      toast.error(
+        "Sorry, you are not logged in, Please check your ID or Password",
+        {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          theme: "colored",
+        }
+      );
+      router.push("/");
     }
 
+    setSignInData({ email: "", password: "" });
   };
 
   const handleLogout = async () => {
@@ -163,9 +159,8 @@ const Navbar = () => {
         { withCredentials: true }
       );
       if (response.status === 200) {
-        
+        setIsLoggedIn(false);
         router.push("/");
-        setIsAuthenticated(false);
         toast.success("You logged out successfully", {
           position: "top-right",
           autoClose: 3000,
@@ -333,8 +328,7 @@ const Navbar = () => {
                 />
               )}{" "}
             </div>
-            <div className="flex justify-between">
-              <p className="text-red-500">{errorMessage}</p>
+            <div className="flex justify-end">
               <Link className="text-blue-600" href={""}>
                 {" "}
                 Forgot Password?
@@ -417,7 +411,19 @@ const Navbar = () => {
                   Skills
                 </Link>
               </li>
-             
+              <li>
+                <Link
+                  href="https://asker-inky.vercel.app/"
+                  target="_blank"
+                  className={`
+                       text-neutral-200
+                   hover:text-blue-600 transition-all flex relative pr-3`}
+                  onClick={() => setmenushow(false)}
+                >
+                  ChatBot{" "}
+                  <FaLock className="lock absolute top-0 right-0 text-sm text-blue-600" />
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/blogs"
@@ -489,7 +495,17 @@ const Navbar = () => {
                     Skills
                   </Link>
                 </li>
-                
+                <li>
+                  <Link
+                    href="https://asker-inky.vercel.app"
+                    target="_blank"
+                    prefetch={true}
+                    className={` text-neutral-200
+                    hover:text-blue-600 transition-all flex relative pr-3`}
+                  >
+                    ChatBot 
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/flashback"
@@ -516,7 +532,7 @@ const Navbar = () => {
                     Blogs
                   </Link>
                 </li>
-                {isAuthenticated && (
+                {isLoggedIn && (
                   <li>
                     <Link
                       href="/profile"
@@ -543,7 +559,7 @@ const Navbar = () => {
               Contact Me
             </button>
             <div>
-              {isAuthenticated ? (
+              {isLoggedIn ? (
                 <button
                   onClick={handleLogout}
                   className="py-3 px-8 rounded-lg bg-blue-600 text-white hover:bg-white hover:text-blue-600 transition-all flex  gap-2 items-center"
@@ -562,7 +578,7 @@ const Navbar = () => {
           </div>
           <div className="lg:hidden w-3/4 flex justify-end items-center gap-5">
             <div>
-              {isAuthenticated ? (
+              {isLoggedIn ? (
                 <button className="py-2 px-6 rounded-lg bg-blue-600 text-nowrap flex items-center gap-2 text-white transition-all hover:bg-white hover:text-blue-600">
                   <LuLogIn className="text-xl" /> Log out
                 </button>

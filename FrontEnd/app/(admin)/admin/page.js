@@ -36,7 +36,7 @@ const Page = () => {
         },
         { withCredentials: true }
       );
-      if (response.status === 200) {
+      if (response.status === 200 || response.data.token) {
         toast.success("You are login successfully", {
           position: "top-right",
           draggable: true,
@@ -46,7 +46,7 @@ const Page = () => {
           pauseOnHover: true,
           theme: "colored",
         });
-       
+        Cookies.set("admin", response.data.token);
         setFormData({ email: "", password: "" });
         router.push("/dashboard");
       } 

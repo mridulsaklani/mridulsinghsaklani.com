@@ -46,12 +46,9 @@ const Banner = () => {
     ></ReactTyped>
           </h1>
           <p className="text-xl text-neutral-200 mb-10 text-center lg:text-start">
-            Creating seamless web experiences, I specialize in crafting
-            responsive, engaging sites that align with client goals and capture
-            user attention. Every project brings a new opportunity for
-            innovation.
+            I build smart software powered by <span className="text-blue-500 font-medium tracking-wide">Artificial Intelligence &  Machine Learning</span> and the <span className="text-blue-500 font-medium tracking-wide">MERN stack</span> — delivering innovative, scalable solutions from concept to deployment. Behind the rough face lies an intelligent, logical mind that turns ideas into reality.
           </p>
-          <div className="flex justify-center lg:justify-start">
+          {/* <div className="flex justify-center lg:justify-start">
             <Link
               href=""
               className="text-lg bg-blue-600 py-3 px-8 rounded-lg text-white flex items-center gap-2 hover:bg-white hover:text-blue-600 transition-all"
@@ -59,7 +56,7 @@ const Banner = () => {
               
               <AiOutlineDollarCircle className="text-xl" /> Hire Me
             </Link>
-          </div>
+          </div> */}
         </div>
         <div className="lg:w-1/2  flex justify-center items-center " data-aos="zoom-in-left">
           <Image

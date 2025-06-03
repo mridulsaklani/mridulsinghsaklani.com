@@ -1,35 +1,28 @@
 import { NextResponse } from "next/server";
+import { NextRequest } from "next/server"
 
-export async function middleware(request) {
-    const token = request.cookies.get("accessToken")?.value;
+export function middleware(NextRequest) {
 
-    let userRole = null;
+    const token = NextRequest.cookies.get("admin")?.value;
+    const user = NextRequest.cookies.get("token")?.value;
+   
 
-    if (token) {
-        try {
-            const verifyAuth = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}auth/verify`, {
-                headers: {
-                    cookie: `accessToken=${token}`,
-                },
-                credentials: "include",
-            });
-
-            const data = await verifyAuth.json();
-            userRole = data?.user?.role;
-        } catch (err) {
-            console.error("Auth verification failed", err);
-        }
-    }
-
-    if (request.nextUrl.pathname.startsWith("/dashboard")) {
-        if (userRole !== "ADMIN") {
-            return NextResponse.redirect(new URL("/", request.url));
-        }
-    }
-
-    if (request.nextUrl.pathname.startsWith("/profile")) {
+    if (NextRequest.nextUrl.pathname.startsWith("/dashboard")) {
         if (!token) {
-            return NextResponse.redirect(new URL("/", request.url));
+            
+            return NextResponse.redirect(new URL("/admin", NextRequest.url));
+        }
+    }
+
+    if (NextRequest.nextUrl.pathname.startsWith("/notes")) {
+        if(!user){
+            return NextResponse.redirect(new URL('/', NextRequest.url))
+        }
+    }
+
+    if (NextRequest.nextUrl.pathname.startsWith("/profile")){
+        if(!user){
+            return NextResponse.redirect(new URL("/",  NextRequest.url))
         }
     }
 
@@ -37,5 +30,8 @@ export async function middleware(request) {
 }
 
 export const config = {
-    matcher: ["/dashboard/:path*", "/profile/:path*"],
+    matcher: ["/dashboard/:path*", "/notes/:path*", "/profile/:path*"],
 };
+
+
+

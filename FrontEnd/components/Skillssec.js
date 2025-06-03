@@ -54,11 +54,12 @@ const Skills = () => {
             <div className="border-white p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/nodejs.png" width={100} height={100} alt="nodejs" data-aos="zoom-in" />
             </div>
-            <div className="border-white p-4 flex items-center justify-center">
-            <Image className="skill-img transition-all" src="/images/mongo-db.png" width={100} height={100} alt="mongo-db" data-aos="zoom-in" data-aos-delay="200"/>
-            </div>
+          
             <div className="border-white p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/express-js.png" width={100} height={100} alt="express js" data-aos="zoom-in" data-aos-delay="200"/>
+            </div>
+            <div className="border-white p-4 flex items-center justify-center">
+            <Image className="skill-img transition-all" src="/images/fastapi.svg" width={100} height={100} alt="express js" data-aos="zoom-in" data-aos-delay="200"/>
             </div>
             <div className=" p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/java.png" width={100} height={100} alt="express js" data-aos="zoom-in" data-aos-delay="200"/>
@@ -67,20 +68,35 @@ const Skills = () => {
           <div className="  skill-border grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 p-8 rounded-lg">
             <div className="border-right p-4 flex items-center justify-center">
               <h3 className="text-xl font-semibold text-white">
-                Other Skills
+                Data Base Skills
               </h3>
             </div>
             <div className="border-right p-4 flex items-center justify-center">
+              <Image className="skill-img transition-all" src="/images/mongo-db.png" width={100} height={100} alt="python" data-aos="zoom-in" />
+            </div>
+            <div className=" p-4 flex items-center justify-center">
+            <Image className="skill-img transition-all" src="/images/postgresq.png" width={100} height={100} alt="typescript" data-aos="zoom-in" data-aos-delay="200"/>
+            
+            </div>
+           
+          </div>
+          <div className=" background grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 p-8 rounded-lg">
+            <div className="border-white p-4 flex items-center justify-center">
+              <h3 className="text-xl font-semibold text-white">
+                Other Skills
+              </h3>
+            </div>
+            <div className="border-white p-4 flex items-center justify-center">
               <Image className="skill-img transition-all" src="/images/python.png" width={100} height={100} alt="python" data-aos="zoom-in" />
             </div>
-            <div className="border-right p-4 flex items-center justify-center">
+            <div className="border-white p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/typescript.png" width={100} height={100} alt="typescript" data-aos="zoom-in" data-aos-delay="200"/>
             
             </div>
-            <div className="border-right p-4 flex items-center justify-center">
+            <div className="border-white p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/c-language.png" width={100} height={100} alt="figma" data-aos="zoom-in" data-aos-delay="400"/>
             </div>
-            <div className="border-right p-4 flex items-center justify-center">
+            <div className="border-white p-4 flex items-center justify-center">
             <Image className="skill-img transition-all" src="/images/figma.png" width={100} height={100} alt="tailwind" data-aos="zoom-in" data-aos-delay="600"/>
             </div>
             <div className=" p-4 flex items-center justify-center">

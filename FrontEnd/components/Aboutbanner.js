@@ -25,10 +25,10 @@ const Aboutbanner = () => {
         </div>
         <div className="lg:w-1/2 justify-center flex" data-aos="zoom-out">
           <Image
-            src="/images/Mridul-new.jpg"
+            src="/images/work.jpg"
             className="shadow-blue-400 shadow-xl rounded-xl"
-            width={360}
-            height={360}
+            width={560}
+            height={560}
             quality={100}
             alt="Mridul Singh Saklani"
           /> 
